@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package controlador;
 public class cls_notas {
         private String str_nombre;
@@ -21,7 +17,7 @@ public class cls_notas {
             this.flt_seguimiento = seguimiento;
             this.str_fecha = fecha;
             this.str_asignatura = asignatura;
-            
+            this.flt_final = (float)((this.flt_nota1*0.25)+(this.flt_nota2*0.25)+(this.flt_seguimiento*0.50));
         }
 
     public String getStr_nombre() {
