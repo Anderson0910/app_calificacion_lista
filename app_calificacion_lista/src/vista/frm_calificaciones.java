@@ -232,7 +232,25 @@ public class frm_calificaciones extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_consultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_consultarActionPerformed
-        // TODO add your handling code here:
+        bln_sw = false;
+        int_posicion = 0;
+        for(int i = 0; i < obj_calificaciones.size(); i++) {
+            if(txt_codigo.getText().equals(obj_calificaciones.get(i).getStr_codigo())){
+                bln_sw = true;
+                int_posicion = i;
+                break;
+            }
+        }
+        if(bln_sw == false){
+            JOptionPane.showMessageDialog(null, "no se encontraron registro","consultar",JOptionPane.ERROR_MESSAGE);
+        }else{
+            txt_asignatura.setText(obj_calificaciones.get(int_posicion).getStr_asignatura());
+            txt_n1.setText(""+obj_calificaciones.get(int_posicion).getFlt_nota1());
+            txt_n2.setText(""+obj_calificaciones.get(int_posicion).getFlt_nota2());
+            txt_fecha.setText(obj_calificaciones.get(int_posicion).getStr_fecha());
+            txt_nombre.setText(obj_calificaciones.get(int_posicion).getStr_nombre());
+            
+        }
     }//GEN-LAST:event_btn_consultarActionPerformed
     private void fnt_limpiar(){
         txt_asignatura.setText("");

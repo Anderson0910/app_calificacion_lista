@@ -72,6 +72,11 @@ public class cls_notas {
         return str_asignatura;
     }
 
+    public String getStr_codigo() {
+        return str_codigo;
+    }
+    
+
     public void setStr_asignatura(String str_asignatura) {
         this.str_asignatura = str_asignatura;
     }
